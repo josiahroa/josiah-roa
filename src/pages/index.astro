@@ -6,11 +6,44 @@
   <head>
     <meta charset="utf-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
     <title>Josiah Roa</title>
   </head>
-  <body>
-    <h1>Astro</h1>
+  <body class="bg-zinc-900">
+    <secion id="home">
+      <div class="w-full h-screen flex flex-col justify-center items-start">
+        <div class="px-10">
+          <h1 class="text-white font-light text-4xl">
+            Hello. I'm
+            <span
+              class="font-bold bg-gradient-to-t from-blue-500 to-blue-200 text-transparent bg-clip-text"
+              >Josiah</span
+            >.
+          </h1>
+          <h1 class="text-white text-lg">Software Developer</h1>
+        </div>
+        <div class="flex flex-row w-full items-center">
+          <div
+            class="w-1/2 my-6 h-2 bg-gradient-to-l from-blue-500 to-zinc-800"
+          >
+          </div>
+          <div class="w-6 h-6 rounded-full bg-blue-500"></div>
+        </div>
+        <div class="px-10">
+          <p class="text-white text-opacity-50">
+            Committed to user experience, product performance, and excellence in
+            code quality.
+          </p>
+        </div>
+      </div>
+    </secion>
+    <!-- <section>
+      <div><h1>About</h1></div>
+    </section> -->
   </body>
 </html>
