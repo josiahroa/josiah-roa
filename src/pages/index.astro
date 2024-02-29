@@ -17,10 +17,10 @@ import Nav from "../components/Nav";
   <body class="bg-zinc-900">
     <div class="relative">
       <Nav>
-        <Nav.Item id="home" label="Home" client:load />
-        <Nav.Item id="about" label="About" client:load />
-        <Nav.Item id="work" label="Work" client:load />
-        <Nav.Item id="blog" label="Blog" client:load />
+        <Nav.Item id="home" label="Home" client:only />
+        <Nav.Item id="about" label="About" client:only />
+        <Nav.Item id="work" label="Work" client:only />
+        <Nav.Item id="blog" label="Blog" client:only />
       </Nav>
       <secion id="home">
         <div class="w-full h-screen flex flex-col justify-center items-start">

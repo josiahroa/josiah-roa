@@ -1,4 +1,4 @@
-import React, { type ReactNode } from "react";
+import { type ReactNode } from "react";
 import { Item } from "./Nav.components";
 
 interface NavProps {
@@ -7,8 +7,10 @@ interface NavProps {
 
 export default function Nav({ children }: NavProps) {
   return (
-    <div className="bg-red-500 w-full fixed px-10 flex flex-row justify-between z-10">
-      {children}
+    <div className="bg-red-500 w-full fixed z-10 flex justify-center">
+      <div className="bg-blue-400 w-4/5 max-w-[600px] flex flex-row justify-around">
+        {children}
+      </div>
     </div>
   );
 }
