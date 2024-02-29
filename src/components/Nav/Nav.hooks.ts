@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-export const useDetermineActive = (id: string) => {
+export const useDetermineActiveItem = (id: string) => {
   const [isActive, setIsActive] = useState(window.location.hash === `#${id}`);
 
   useEffect(() => {
@@ -24,4 +24,20 @@ export const useDetermineActive = (id: string) => {
   }, [window.location.pathname, window.location.hash]);
 
   return isActive;
+};
+
+export const useDetermineYOffset = () => {
+  const [scrollY, setScrollY] = useState(window.scrollY);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrollY(window.scrollY);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  return scrollY;
 };
