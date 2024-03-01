@@ -15,7 +15,9 @@ export default function Nav({ children }: NavProps) {
         className={`${
           yOffset > 60 &&
           "transition-background-color transition-colors ease-in-out duration-500 bg-zinc-800/70 backdrop-blur-sm border border-zinc-600"
-        } transition-background-color transition-colors ease-in-out duration-500 rounded-lg py-4 px-4 w-[95%] max-w-[600px] flex flex-row justify-around border-zinc-600`}
+        } ${
+          yOffset <= 60 && "border border-zinc-900"
+        } transition-background-color transition-colors ease-in-out duration-500 rounded-lg py-4 px-4 w-[95%] max-w-[600px] flex flex-row justify-around `}
       >
         {children}
       </div>
