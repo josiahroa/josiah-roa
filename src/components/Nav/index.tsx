@@ -1,5 +1,5 @@
 import { type ReactNode } from "react";
-import { Item } from "./Nav.components";
+import { Item, Link } from "./Nav.components";
 import { useDetermineYOffset } from "./Nav.hooks";
 
 interface NavProps {
@@ -15,7 +15,7 @@ export default function Nav({ children }: NavProps) {
         className={`${
           yOffset > 60 &&
           "transition-background-color ease-in-out duration-500 bg-zinc-800/70 backdrop-blur-sm"
-        } transition-background-color ease-in-out duration-500 rounded-lg py-4 px-4 w-4/5 max-w-[600px] flex flex-row justify-around`}
+        } transition-background-color ease-in-out duration-500 rounded-lg py-4 px-4 w-6/7 max-w-[600px] flex flex-row justify-around`}
       >
         {children}
       </div>
@@ -24,3 +24,4 @@ export default function Nav({ children }: NavProps) {
 }
 
 Nav.Item = Item;
+Nav.Link = Link;
