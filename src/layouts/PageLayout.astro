@@ -1,0 +1,34 @@
+---
+import { ViewTransitions } from "astro:transitions";
+import Nav from "../components/Nav";
+const AstroProps = Astro.props;
+console.log(AstroProps);
+---
+
+<html lang="en" class="scroll-smooth">
+  <head>
+    <ViewTransitions />
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Josiah Roa</title>
+  </head>
+  <body class="bg-zinc-900">
+    <div class="relative">
+      <Nav client:only>
+        <Nav.Link path="/" label="Home" client:only />
+        <Nav.Link path="/about" label="About" client:only />
+        <Nav.Link path="/work" label="My Work" client:only />
+        <Nav.Link path="/blog" label="Blog" client:only />
+      </Nav>
+      <secion>
+        <slot />
+      </secion>
+    </div>
+  </body>
+</html>

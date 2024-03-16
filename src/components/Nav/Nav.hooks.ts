@@ -1,19 +1,26 @@
 import { useState, useEffect } from "react";
 
-export const useDetermineActiveItem = (id: string) => {
-  const [isActive, setIsActive] = useState(window.location.hash === `#${id}`);
+export const useDetermineActiveItem = (path: string) => {
+  const [isActive, setIsActive] = useState(window.location.hash === `/${path}`);
 
   useEffect(() => {
     const handleHashChange = () => {
       const isRootPath =
         window.location.pathname === "/" &&
         window.location.hash === "" &&
-        id === "home";
+        path === "home";
       if (isRootPath) {
         return setIsActive(true);
       }
 
-      setIsActive(window.location.hash === `#${id}`);
+      const isBlogPath =
+        window.location.pathname === "/blog" && path === "/blog";
+      console.log(isBlogPath, window.location.pathname);
+      if (isBlogPath) {
+        return setIsActive(true);
+      }
+
+      setIsActive(window.location.hash === `/${path}`);
     };
 
     handleHashChange();
