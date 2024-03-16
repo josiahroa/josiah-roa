@@ -1,5 +1,5 @@
 import { type ReactNode } from "react";
-import { Item, Link } from "./Nav.components";
+import { Link } from "./Nav.components";
 import { useDetermineYOffset } from "./Nav.hooks";
 
 interface NavProps {
@@ -25,5 +25,4 @@ export default function Nav({ children }: NavProps) {
   );
 }
 
-Nav.Item = Item;
 Nav.Link = Link;
