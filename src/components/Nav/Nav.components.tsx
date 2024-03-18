@@ -14,9 +14,11 @@ export function Link({ path, label }: LinkProps) {
         <div
           className={`${
             isActive && "bg-zinc-600"
-          } transition-background-color ease-in-out duration-200 hover:bg-zinc-600 px-3 py-2 mx-1 rounded-md`}
+          } transition-background-color ease-in-out duration-200 hover:bg-zinc-600 px-3 md:px-6 lg:px-8 py-2 mx-1 rounded-md`}
         >
-          <p className="text-gray-100 text-xs">{label}</p>
+          <p className="font-bold text-gray-100 text-xs sm:text-base">
+            {label}
+          </p>
         </div>
       </a>
     </div>
