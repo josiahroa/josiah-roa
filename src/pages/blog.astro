@@ -1,11 +1,14 @@
 ---
 import Layout from "../layouts/PageLayout.astro";
+import BlogList from "../components/BlogList";
+
+const blogMockData = [];
 ---
 
 <Layout>
   <main id="blog-page" class="h-screen">
     <header class="h-2/5">
-      <div id="spacer" class="h-5"></div>
+      <div id="spacer" class=""></div>
       <div class="w-full h-full relative">
         <div id="top" class="w-full h-1/2"></div>
         <div
@@ -20,7 +23,14 @@ import Layout from "../layouts/PageLayout.astro";
       </div>
     </header>
     <section id="blog-list" class="h-3/5 bg-white">
-      <div></div>
+      <BlogList>
+        {
+          blogMockData &&
+            blogMockData.map((blog) => (
+              <BlogList.Card blogMetadata={blog.metadata} />
+            ))
+        }
+      </BlogList>
     </section>
   </main>
 </Layout>
