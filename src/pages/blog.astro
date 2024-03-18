@@ -3,5 +3,24 @@ import Layout from "../layouts/PageLayout.astro";
 ---
 
 <Layout>
-  <section></section>
+  <main id="blog-page" class="h-screen">
+    <header class="h-2/5">
+      <div id="spacer" class="h-5"></div>
+      <div class="w-full h-full relative">
+        <div id="top" class="w-full h-1/2"></div>
+        <div
+          id="overlay"
+          class="w-full h-1/2 absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 flex justify-center items-center"
+        >
+          <div id="overlay-content" class="w-[95%] h-full bg-red-500 rounded">
+            <!-- Image fill here -->
+          </div>
+        </div>
+        <div id="bottom" class="w-full h-1/2 bg-white"></div>
+      </div>
+    </header>
+    <section id="blog-list" class="h-3/5 bg-white">
+      <div></div>
+    </section>
+  </main>
 </Layout>
