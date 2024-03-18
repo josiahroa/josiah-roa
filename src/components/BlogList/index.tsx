@@ -1,12 +1,44 @@
-import type { ReactNode } from "react";
-import { BlogListCard } from "./BlogList.componets";
+import { Card } from "./BlogList.componets";
 
-interface BlogListProps {
-  children: ReactNode;
+const blogMockData = [
+  {
+    metadata: {
+      title: "How It All Goes Live: An Overview of Streaming Technology",
+      tags: [{ name: "Systems Design" }],
+      imageUri: "",
+    },
+  },
+  {
+    metadata: {
+      title: "How It All Goes Live: An Overview of Streaming Technology",
+      tags: [{ name: "Systems Design" }],
+      imageUri: "",
+    },
+  },
+  {
+    metadata: {
+      title: "How It All Goes Live: An Overview of Streaming Technology",
+      tags: [{ name: "Systems Design" }],
+      imageUri: "",
+    },
+  },
+  {
+    metadata: {
+      title: "How It All Goes Live: An Overview of Streaming Technology",
+      tags: [{ name: "Systems Design" }],
+      imageUri: "",
+    },
+  },
+];
+
+export default function BlogList() {
+  return (
+    <div
+      id="blog-list-wrapper"
+      className="flex flex-col w-full justify-center items-center"
+    >
+      {blogMockData &&
+        blogMockData.map((blog) => <Card blogMetadata={blog.metadata} />)}
+    </div>
+  );
 }
-
-export default function BlogList({ children }: BlogListProps) {
-  return <div>{children}</div>;
-}
-
-BlogList.Card = BlogListCard;

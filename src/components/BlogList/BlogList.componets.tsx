@@ -1,12 +1,12 @@
-interface BlogListCardProps {
+interface CardProps {
   blogMetadata: BlogMetadata;
 }
 
-export function BlogListCard({ blogMetadata }: BlogListCardProps) {
+export function Card({ blogMetadata }: CardProps) {
   return (
-    <div>
-      <img src={blogMetadata.imageUri} />
-      <h3>{blogMetadata.title}</h3>
+    <div className="w-5/6 mb-12 max-w-96">
+      <div id="image-wrapper" className="w-full h-36 bg-red-500 rounded"></div>
+      <h3 className="font-bold text-xl">{blogMetadata.title}</h3>
       {blogMetadata.tags &&
         blogMetadata.tags.length > 0 &&
         blogMetadata.tags.map((tag) => {
